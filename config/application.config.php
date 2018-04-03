@@ -2,7 +2,7 @@
 
 return [
     'modules' => [
-        'LeoGalleguillos\reCAPTCHA',
+        'LeoGalleguillos\ReCaptcha',
         'Zend\Router',
     ],
     // These are various options for the listeners attached to the ModuleManager

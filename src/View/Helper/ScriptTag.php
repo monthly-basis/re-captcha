@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\reCAPTCHA\View\Helper;
+namespace LeoGalleguillos\ReCaptcha\View\Helper;
 
 use Zend\View\Helper\AbstractHelper;
 

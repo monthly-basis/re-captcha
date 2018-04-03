@@ -10,8 +10,12 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
+                    'getReCaptchaScriptTag' => ReCaptchaHelper\ScriptTag::class,
                 ],
                 'factories' => [
+                    ReCaptchaHelper\ScriptTag::class => function ($serviceManager) {
+                        return new ReCaptchaHelper\ScriptTag();
+                    },
                 ],
             ],
         ];
