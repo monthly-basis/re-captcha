@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e9c73fd637efb8c76e0fd52167ae43b0",
-    "content-hash": "260d26b146a3b1f58b7a39720543bfe1",
+    "hash": "27549bfb13ce2481ac3601ba2c3c6b23",
+    "content-hash": "800915be35b45525db6d478247e13ad8",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -91,6 +91,36 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
+        },
+        {
+            "name": "leo-galleguillos/string",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/String.git",
+                "reference": "b00150a7cf2ad6890b602e709268e420b80d10c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/b00150a7cf2ad6890b602e709268e420b80d10c3",
+                "reference": "b00150a7cf2ad6890b602e709268e420b80d10c3",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\String\\": "src/",
+                    "LeoGalleguillos\\StringTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-03-30 07:05:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2482,7 +2512,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "leo-galleguillos/string": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

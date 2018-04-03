@@ -2,6 +2,7 @@
 namespace LeoGalleguillos\ReCaptcha;
 
 use LeoGalleguillos\ReCaptcha\View\Helper as ReCaptchaHelper;
+use LeoGalleguillos\String\View\Helper as StringHelper;
 
 class Module
 {
@@ -15,9 +16,10 @@ class Module
                 ],
                 'factories' => [
                     ReCaptchaHelper\DivTag::class => function ($serviceManager) {
-                        $config = $serviceManager->get('Config')['re-captcha'];
+                        $viewHelperManager = $serviceManager->get('ViewHelperManager');
                         return new ReCaptchaHelper\DivTag(
-                            $config['site-key']
+                            $serviceManager->get('Config')['re-captcha']['site-key'],
+                            $viewHelperManager->get(StringHelper\Escape::class)
                         );
                     },
                     ReCaptchaHelper\ScriptTag::class => function ($serviceManager) {
