@@ -1,0 +1,13 @@
+{
+    "name": "leo-galleguillos/reCAPTCHA",
+    "license": "MIT",
+    "require": {
+        "zendframework/zend-test": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LeoGalleguillos\\reCAPTCHA\\": "src/",
+            "LeoGalleguillos\\reCAPTCHATest\\": "test/"
+        }
+    }
+}
