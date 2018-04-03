@@ -12,7 +12,7 @@ class Valid
     public function isValid()
     {
         $data = [
-            'secret'   => $secretKey,
+            'secret'   => $this->secretKey,
             'response' => $_POST['g-recaptcha'],
             'remoteip' => $_SERVER['REMOTE_ADDR'],
         ];
@@ -22,6 +22,8 @@ class Valid
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		$response = curl_exec($curl);
 		curl_close($curl);
-		var_dump($response);
+
+        $json = json_decode($response);
+		return $json->success;
     }
 }

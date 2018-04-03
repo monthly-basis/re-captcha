@@ -18,4 +18,13 @@ class ValidTest extends TestCase
             $this->validService
         );
     }
+
+    public function testIsValid()
+    {
+        $_POST['g-recaptcha'] = 'test';
+        $_SERVER['REMOTE_ADDR'] = '123.123.123.123';
+        $this->assertFalse(
+            $this->validService->isValid()
+        );
+    }
 }
