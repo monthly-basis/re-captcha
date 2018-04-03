@@ -1,5 +1,7 @@
 <?php
-namespace LeoGalleguillos\reCAPTCHA;
+namespace LeoGalleguillos\ReCaptcha;
+
+use LeoGalleguillos\ReCaptcha\View\Helper as ReCaptchaHelper;
 
 class Module
 {
