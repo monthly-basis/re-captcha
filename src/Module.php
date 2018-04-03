@@ -36,7 +36,9 @@ class Module
         return [
             'factories' => [
                 ReCaptchaService\Valid::class => function ($serviceManager) {
-                    return new ReCaptchaService\Valid();
+                    return new ReCaptchaService\Valid(
+                        $serviceManager->get('Config')['re-captcha']['secret-key']
+                    );
                 },
             ],
         ];
