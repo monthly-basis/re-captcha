@@ -11,6 +11,17 @@ class Valid
 
     public function isValid()
     {
-
+        $data = [
+            'secret'   => $secretKey,
+            'response' => $_POST['g-recaptcha'],
+            'remoteip' => $_SERVER['REMOTE_ADDR'],
+        ];
+		$curl = curl_init('https://www.google.com/recaptcha/api/siteverify');
+		curl_setopt($curl, CURLOPT_POST, true);
+		curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		$response = curl_exec($curl);
+		curl_close($curl);
+		var_dump($response);
     }
 }
