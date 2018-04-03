@@ -1,5 +1,5 @@
 {
-    "name": "leo-galleguillos/reCAPTCHA",
+    "name": "leo-galleguillos/recaptcha",
     "license": "MIT",
     "require": {
         "zendframework/zend-test": "^3.1"
