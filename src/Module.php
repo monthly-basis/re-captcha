@@ -1,6 +1,7 @@
 <?php
 namespace LeoGalleguillos\ReCaptcha;
 
+use LeoGalleguillos\ReCaptcha\Model\Service as ReCaptchaService;
 use LeoGalleguillos\ReCaptcha\View\Helper as ReCaptchaHelper;
 use LeoGalleguillos\String\View\Helper as StringHelper;
 
@@ -34,6 +35,9 @@ class Module
     {
         return [
             'factories' => [
+                ReCaptchaService\Valid::class => function ($serviceManager) {
+                    return new ReCaptchaService\Valid();
+                },
             ],
         ];
     }
