@@ -13,7 +13,7 @@ class Valid
     {
         $data = [
             'secret'   => $this->secretKey,
-            'response' => $_POST['g-recaptcha'],
+            'response' => $_POST['g-recaptcha-response'],
             'remoteip' => $_SERVER['REMOTE_ADDR'],
         ];
 		$curl = curl_init('https://www.google.com/recaptcha/api/siteverify');
