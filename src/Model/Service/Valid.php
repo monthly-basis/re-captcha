@@ -9,21 +9,25 @@ class Valid
         $this->secretKey = $secretKey;
     }
 
-    public function isValid()
+    public function isValid(): bool
     {
+        if (empty($_POST['g-recaptcha-response'])) {
+            return false;
+        }
+
         $data = [
             'secret'   => $this->secretKey,
             'response' => $_POST['g-recaptcha-response'],
             'remoteip' => $_SERVER['REMOTE_ADDR'],
         ];
-		$curl = curl_init('https://www.google.com/recaptcha/api/siteverify');
-		curl_setopt($curl, CURLOPT_POST, true);
-		curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		$response = curl_exec($curl);
-		curl_close($curl);
+        $curl = curl_init('https://www.google.com/recaptcha/api/siteverify');
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($curl);
+        curl_close($curl);
 
         $json = json_decode($response);
-		return $json->success;
+        return (bool) $json->success;
     }
 }
