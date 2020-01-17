@@ -16,14 +16,14 @@ class Module
                     'getReCaptchaScriptTag' => ReCaptchaHelper\ScriptTag::class,
                 ],
                 'factories' => [
-                    ReCaptchaHelper\DivTag::class => function ($serviceManager) {
-                        $viewHelperManager = $serviceManager->get('ViewHelperManager');
+                    ReCaptchaHelper\DivTag::class => function ($sm) {
+                        $viewHelperManager = $sm->get('ViewHelperManager');
                         return new ReCaptchaHelper\DivTag(
-                            $serviceManager->get('Config')['re-captcha']['site-key'],
+                            $sm->get('Config')['re-captcha']['site-key'],
                             $viewHelperManager->get(StringHelper\Escape::class)
                         );
                     },
-                    ReCaptchaHelper\ScriptTag::class => function ($serviceManager) {
+                    ReCaptchaHelper\ScriptTag::class => function ($sm) {
                         return new ReCaptchaHelper\ScriptTag();
                     },
                 ],
@@ -35,9 +35,9 @@ class Module
     {
         return [
             'factories' => [
-                ReCaptchaService\Valid::class => function ($serviceManager) {
+                ReCaptchaService\Valid::class => function ($sm) {
                     return new ReCaptchaService\Valid(
-                        $serviceManager->get('Config')['re-captcha']['secret-key']
+                        $sm->get('Config')['re-captcha']['secret-key']
                     );
                 },
             ],
