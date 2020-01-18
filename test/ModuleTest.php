@@ -19,6 +19,8 @@ class ModuleTest extends TestCase
 
     public function testGetConfig()
     {
+        $_SERVER['HTTP_HOST'] = 'example.com';
+
         $applicationConfig = include(__DIR__ . '/../config/application.config.php');
         $this->application = Application::init($applicationConfig);
         $serviceConfig     = $this->module->getServiceConfig();

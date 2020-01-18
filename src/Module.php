@@ -19,7 +19,7 @@ class Module
                     ReCaptchaHelper\DivTag::class => function ($sm) {
                         $viewHelperManager = $sm->get('ViewHelperManager');
                         return new ReCaptchaHelper\DivTag(
-                            $sm->get('Config')['re-captcha']['site-key'],
+                            $sm->get('Config')['re-captcha']['domains'][$_SERVER['HTTP_HOST']]['site-key'],
                             $viewHelperManager->get(StringHelper\Escape::class)
                         );
                     },
@@ -37,7 +37,7 @@ class Module
             'factories' => [
                 ReCaptchaService\Valid::class => function ($sm) {
                     return new ReCaptchaService\Valid(
-                        $sm->get('Config')['re-captcha']['secret-key']
+                        $sm->get('Config')['re-captcha']['domains'][$_SERVER['HTTP_HOST']]['secret-key']
                     );
                 },
             ],
