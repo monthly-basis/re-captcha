@@ -3,7 +3,7 @@ namespace LeoGalleguillos\ReCaptcha;
 
 use LeoGalleguillos\ReCaptcha\Model\Service as ReCaptchaService;
 use LeoGalleguillos\ReCaptcha\View\Helper as ReCaptchaHelper;
-use LeoGalleguillos\String\View\Helper as StringHelper;
+use LeoGalleguillos\String\Model\Service as StringService;
 
 class Module
 {
@@ -17,10 +17,9 @@ class Module
                 ],
                 'factories' => [
                     ReCaptchaHelper\DivTag::class => function ($sm) {
-                        $viewHelperManager = $sm->get('ViewHelperManager');
                         return new ReCaptchaHelper\DivTag(
                             $sm->get('Config')['re-captcha']['domains'][$_SERVER['HTTP_HOST']]['site-key'],
-                            $viewHelperManager->get(StringHelper\Escape::class)
+                            $sm->get(StringService\Escape::class)
                         );
                     },
                     ReCaptchaHelper\ScriptTag::class => function ($sm) {
