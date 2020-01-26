@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75a674d054ce3351157782bb75acf855",
+    "content-hash": "369fda258073edb61a6772a9904a85a5",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1204,16 +1204,16 @@
         },
         {
             "name": "leo-galleguillos/string",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/String.git",
-                "reference": "9a3f01741eea81ca120499b42b9b42ebf3bca6eb"
+                "reference": "cd4d14a2571d1778a8d7a4bb39b75675b1570bcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/9a3f01741eea81ca120499b42b9b42ebf3bca6eb",
-                "reference": "9a3f01741eea81ca120499b42b9b42ebf3bca6eb",
+                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/cd4d14a2571d1778a8d7a4bb39b75675b1570bcb",
+                "reference": "cd4d14a2571d1778a8d7a4bb39b75675b1570bcb",
                 "shasum": ""
             },
             "require": {
@@ -1230,7 +1230,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-01-13T08:00:21+00:00"
+            "time": "2020-01-25T09:17:34+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1532,24 +1532,24 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.10.1",
+            "version": "v1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "cbe1df668b3fe136bcc909126a0f529a78d4cbbc"
+                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/cbe1df668b3fe136bcc909126a0f529a78d4cbbc",
-                "reference": "cbe1df668b3fe136bcc909126a0f529a78d4cbbc",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
+                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
                 "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0|^5.0",
-                "sebastian/comparator": "^1.2.3|^2.0|^3.0",
-                "sebastian/recursion-context": "^1.0|^2.0|^3.0"
+                "sebastian/comparator": "^1.2.3|^2.0|^3.0|^4.0",
+                "sebastian/recursion-context": "^1.0|^2.0|^3.0|^4.0"
             },
             "require-dev": {
                 "phpspec/phpspec": "^2.5 || ^3.2",
@@ -1591,7 +1591,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2019-12-22T21:05:45+00:00"
+            "time": "2020-01-20T15:57:02+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2744,9 +2744,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "leo-galleguillos/string": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
