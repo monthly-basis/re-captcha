@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class ValidTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->validService = new ReCaptchaService\Valid('secret');
     }
