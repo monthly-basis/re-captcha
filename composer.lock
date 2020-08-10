@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "369fda258073edb61a6772a9904a85a5",
+    "content-hash": "5dc315b1db21eb7254d8dc1ab8687d92",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1206,16 +1206,16 @@
         },
         {
             "name": "leo-galleguillos/string",
-            "version": "v1.0.42",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/String.git",
-                "reference": "67e275fd3e9031ec8a96877960f051816c589676"
+                "reference": "57028c88ecad3566e6c1fe5cc284ae6b2c0b495b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/67e275fd3e9031ec8a96877960f051816c589676",
-                "reference": "67e275fd3e9031ec8a96877960f051816c589676",
+                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/57028c88ecad3566e6c1fe5cc284ae6b2c0b495b",
+                "reference": "57028c88ecad3566e6c1fe5cc284ae6b2c0b495b",
                 "shasum": ""
             },
             "require": {
@@ -1232,7 +1232,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-07-29T16:27:49+00:00"
+            "time": "2020-08-09T03:33:27+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2594,7 +2594,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
