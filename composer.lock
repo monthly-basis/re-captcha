@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5dc315b1db21eb7254d8dc1ab8687d92",
+    "content-hash": "413e8212784d2a2bd045502ec1fb8fc4",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1191,17 +1191,17 @@
             "time": "2020-09-14T14:23:00+00:00"
         },
         {
-            "name": "leo-galleguillos/string",
-            "version": "v2.4.0",
+            "name": "monthly-basis/string",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/LeoGalleguillos/String.git",
-                "reference": "c016f7202a637c03a864af98f6ac440ea80675d4"
+                "url": "https://github.com/monthly-basis/string.git",
+                "reference": "4a98c479856a005a40b12ff813dd02d527cf4a8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/c016f7202a637c03a864af98f6ac440ea80675d4",
-                "reference": "c016f7202a637c03a864af98f6ac440ea80675d4",
+                "url": "https://api.github.com/repos/monthly-basis/string/zipball/4a98c479856a005a40b12ff813dd02d527cf4a8f",
+                "reference": "4a98c479856a005a40b12ff813dd02d527cf4a8f",
                 "shasum": ""
             },
             "require": {
@@ -1210,15 +1210,15 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LeoGalleguillos\\String\\": "src/",
-                    "LeoGalleguillos\\StringTest\\": "test/"
+                    "MonthlyBasis\\String\\": "src/",
+                    "MonthlyBasis\\StringTest\\": "test/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "time": "2020-11-16T20:23:33+00:00"
+            "time": "2020-11-19T06:15:40+00:00"
         },
         {
             "name": "myclabs/deep-copy",

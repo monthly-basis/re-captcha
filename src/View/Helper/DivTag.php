@@ -1,7 +1,7 @@
 <?php
 namespace LeoGalleguillos\ReCaptcha\View\Helper;
 
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 use Zend\View\Helper\AbstractHelper;
 
 class DivTag extends AbstractHelper

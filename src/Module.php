@@ -3,7 +3,7 @@ namespace LeoGalleguillos\ReCaptcha;
 
 use LeoGalleguillos\ReCaptcha\Model\Service as ReCaptchaService;
 use LeoGalleguillos\ReCaptcha\View\Helper as ReCaptchaHelper;
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 
 class Module
 {
