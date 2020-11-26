@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\ReCaptchaTest;
+namespace MonthlyBasis\ReCaptchaTest;
 
-use LeoGalleguillos\ReCaptcha\Module;
+use MonthlyBasis\ReCaptcha\Module;
 use PHPUnit\Framework\TestCase;
 use Zend\Mvc\Application;
 

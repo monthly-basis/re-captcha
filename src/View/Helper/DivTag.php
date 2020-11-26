@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\ReCaptcha\View\Helper;
+namespace MonthlyBasis\ReCaptcha\View\Helper;
 
 use MonthlyBasis\String\Model\Service as StringService;
 use Zend\View\Helper\AbstractHelper;

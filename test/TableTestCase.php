@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\ReCaptchaTest;
+namespace MonthlyBasis\ReCaptchaTest;
 
 use Zend\Db\Adapter\Adapter;
 use PHPUnit\Framework\TestCase;

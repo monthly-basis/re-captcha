@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\ReCaptcha\Model\Service;
+namespace MonthlyBasis\ReCaptcha\Model\Service;
 
 class Valid
 {

@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\ReCaptcha;
+namespace MonthlyBasis\ReCaptcha;
 
-use LeoGalleguillos\ReCaptcha\Model\Service as ReCaptchaService;
-use LeoGalleguillos\ReCaptcha\View\Helper as ReCaptchaHelper;
+use MonthlyBasis\ReCaptcha\Model\Service as ReCaptchaService;
+use MonthlyBasis\ReCaptcha\View\Helper as ReCaptchaHelper;
 use MonthlyBasis\String\Model\Service as StringService;
 
 class Module

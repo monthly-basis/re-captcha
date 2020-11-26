@@ -1,5 +1,5 @@
 {
-    "name": "leo-galleguillos/re-captcha",
+    "name": "monthly-basis/re-captcha",
     "license": "MIT",
     "require": {
         "laminas/laminas-test": "^3.1",
@@ -7,8 +7,8 @@
     },
     "autoload": {
         "psr-4": {
-            "LeoGalleguillos\\ReCaptcha\\": "src/",
-            "LeoGalleguillos\\ReCaptchaTest\\": "test/"
+            "MonthlyBasis\\ReCaptcha\\": "src/",
+            "MonthlyBasis\\ReCaptchaTest\\": "test/"
         }
     }
 }

@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\ReCaptchaTest\Model\Service;
+namespace MonthlyBasis\ReCaptchaTest\Model\Service;
 
-use LeoGalleguillos\ReCaptcha\Model\Service as ReCaptchaService;
+use MonthlyBasis\ReCaptcha\Model\Service as ReCaptchaService;
 use PHPUnit\Framework\TestCase;
 
 class ValidTest extends TestCase

@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\ReCaptchaTest\View\Helper;
+namespace MonthlyBasis\ReCaptchaTest\View\Helper;
 
-use LeoGalleguillos\ReCaptcha\View\Helper as ReCaptchaHelper;
+use MonthlyBasis\ReCaptcha\View\Helper as ReCaptchaHelper;
 use PHPUnit\Framework\TestCase;
 
 class ScriptTagTest extends TestCase

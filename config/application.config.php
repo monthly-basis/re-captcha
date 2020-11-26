@@ -2,7 +2,7 @@
 
 return [
     'modules' => [
-        'LeoGalleguillos\ReCaptcha',
+        'MonthlyBasis\ReCaptcha',
         'MonthlyBasis\String',
         'Zend\Router',
     ],
