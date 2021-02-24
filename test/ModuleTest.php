@@ -12,11 +12,6 @@ class ModuleTest extends TestCase
         $this->module = new Module();
     }
 
-    public function testInstance()
-    {
-        $this->assertInstanceOf(Module::class, $this->module);
-    }
-
     public function testGetConfig()
     {
         $_SERVER['HTTP_HOST'] = 'example.com';
