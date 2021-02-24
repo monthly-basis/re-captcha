@@ -3,7 +3,7 @@ namespace MonthlyBasis\ReCaptchaTest;
 
 use MonthlyBasis\ReCaptcha\Module;
 use PHPUnit\Framework\TestCase;
-use Zend\Mvc\Application;
+use Laminas\Mvc\Application;
 
 class ModuleTest extends TestCase
 {

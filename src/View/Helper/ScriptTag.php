@@ -1,7 +1,7 @@
 <?php
 namespace MonthlyBasis\ReCaptcha\View\Helper;
 
-use Zend\View\Helper\AbstractHelper;
+use Laminas\View\Helper\AbstractHelper;
 
 class ScriptTag extends AbstractHelper
 {
