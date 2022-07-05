@@ -1,6 +1,7 @@
 <?php
 namespace MonthlyBasis\ReCaptcha;
 
+use MonthlyBasis\ReCaptcha\Model\Entity as ReCaptchaEntity;
 use MonthlyBasis\ReCaptcha\Model\Service as ReCaptchaService;
 use MonthlyBasis\ReCaptcha\View\Helper as ReCaptchaHelper;
 use MonthlyBasis\String\Model\Service as StringService;
@@ -34,6 +35,11 @@ class Module
     {
         return [
             'factories' => [
+                ReCaptchaEntity\Config::class => function ($sm) {
+                    return new ReCaptchaEntity\Config(
+                        $sm->get('Config')['monthly-basis']['re-captcha'] ?? []
+                    );
+                },
                 ReCaptchaService\Valid::class => function ($sm) {
                     return new ReCaptchaService\Valid(
                         $sm->get('Config')['re-captcha']['domains'][$_SERVER['HTTP_HOST']]['secret-key']
