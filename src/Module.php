@@ -24,7 +24,9 @@ class Module
                         );
                     },
                     ReCaptchaHelper\ScriptTag::class => function ($sm) {
-                        return new ReCaptchaHelper\ScriptTag();
+                        return new ReCaptchaHelper\ScriptTag(
+                            $sm->get(ReCaptchaService\Allowlists\IpV4::class),
+                        );
                     },
                 ],
             ],
