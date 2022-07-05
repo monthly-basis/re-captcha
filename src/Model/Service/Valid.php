@@ -1,16 +1,24 @@
 <?php
 namespace MonthlyBasis\ReCaptcha\Model\Service;
 
+use MonthlyBasis\ReCaptcha\Model\Service as ReCaptchaService;
+
 class Valid
 {
     public function __construct(
+        ReCaptchaService\Allowlists\IpV4 $ipV4Service,
         string $secretKey
     ) {
-        $this->secretKey = $secretKey;
+        $this->ipV4Service = $ipV4Service;
+        $this->secretKey   = $secretKey;
     }
 
     public function isValid(): bool
     {
+        if ($this->ipV4Service->isIpV4InAllowlists($_SERVER['REMOTE_ADDR'])) {
+            return true;
+        }
+
         if (empty($_POST['g-recaptcha-response'])) {
             return false;
         }
