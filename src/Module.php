@@ -19,6 +19,7 @@ class Module
                 'factories' => [
                     ReCaptchaHelper\DivTag::class => function ($sm) {
                         return new ReCaptchaHelper\DivTag(
+                            $sm->get(ReCaptchaService\Allowlists\IpV4::class),
                             $sm->get('Config')['re-captcha']['domains'][$_SERVER['HTTP_HOST']]['site-key'],
                             $sm->get(StringService\Escape::class)
                         );
