@@ -40,6 +40,11 @@ class Module
                         $sm->get('Config')['monthly-basis']['re-captcha'] ?? []
                     );
                 },
+                ReCaptchaService\Allowlists\IpV4::class => function ($sm) {
+                    return new ReCaptchaService\Allowlists\IpV4(
+                        $sm->get(ReCaptchaEntity\Config::class)
+                    );
+                },
                 ReCaptchaService\Valid::class => function ($sm) {
                     return new ReCaptchaService\Valid(
                         $sm->get('Config')['re-captcha']['domains'][$_SERVER['HTTP_HOST']]['secret-key']
