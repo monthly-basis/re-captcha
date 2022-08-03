@@ -44,6 +44,13 @@ class Module
                         $sm->get('Config')['monthly-basis']['re-captcha'] ?? []
                     );
                 },
+                ReCaptchaService\Allowlists\IpAddress::class => function ($sm) {
+                    return new ReCaptchaService\Allowlists\IpAddress(
+                        $sm->get(IpAddressService\Version::class),
+                        $sm->get(ReCaptchaService\Allowlists\IpV4::class),
+                        $sm->get(ReCaptchaService\Allowlists\IpV6::class),
+                    );
+                },
                 ReCaptchaService\Allowlists\IpV4::class => function ($sm) {
                     return new ReCaptchaService\Allowlists\IpV4(
                         $sm->get(ReCaptchaEntity\Config::class)
