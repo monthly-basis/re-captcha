@@ -3,6 +3,7 @@
 return [
     'modules' => [
         'Laminas\Router',
+        'MonthlyBasis\IpAddress',
         'MonthlyBasis\ReCaptcha',
         'MonthlyBasis\String',
     ],
