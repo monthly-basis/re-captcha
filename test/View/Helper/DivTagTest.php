@@ -10,15 +10,15 @@ class DivTagTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->ipV4ServiceMock = $this->createMock(
-            ReCaptchaService\Allowlists\IpV4::class
+        $this->ipAddressServiceMock = $this->createMock(
+            ReCaptchaService\Allowlists\IpAddress::class
         );
         $this->escapeServiceMock = $this->createMock(
             StringService\Escape::class
         );
 
         $this->divTagHelper = new ReCaptchaHelper\DivTag(
-            $this->ipV4ServiceMock,
+            $this->ipAddressServiceMock,
             'the-site-key',
             $this->escapeServiceMock,
         );
@@ -27,13 +27,13 @@ class DivTagTest extends TestCase
     /**
      * @runInSeparateProcess
      */
-    public function test___invoke_ipV4InAllowlist_htmlComment()
+    public function test___invoke_ipAddressIsInAllowlist_htmlComment()
     {
         $_SERVER['REMOTE_ADDR'] = '1.2.3.4';
 
-        $this->ipV4ServiceMock
+        $this->ipAddressServiceMock
             ->expects($this->once())
-            ->method('isIpV4InAllowlists')
+            ->method('isIpAddressInAllowlists')
             ->with('1.2.3.4')
             ->willReturn(true)
             ;
@@ -43,7 +43,7 @@ class DivTagTest extends TestCase
             ;
 
         $this->assertSame(
-            '<!-- The div tag was omitted because your IPv4 is in the allowlist. -->',
+            '<!-- The div tag was omitted because your IP address is in the allowlists. -->',
             $this->divTagHelper->__invoke()
         );
     }
@@ -55,9 +55,9 @@ class DivTagTest extends TestCase
     {
         $_SERVER['REMOTE_ADDR'] = '1.2.3.4';
 
-        $this->ipV4ServiceMock
+        $this->ipAddressServiceMock
             ->expects($this->once())
-            ->method('isIpV4InAllowlists')
+            ->method('isIpAddressInAllowlists')
             ->with('1.2.3.4')
             ->willReturn(false)
             ;
