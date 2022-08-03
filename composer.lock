@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e28659044c9d29c1e7f352afc1782e6e",
+    "content-hash": "59a7c3e0a4683338850cf8ed3448c971",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -1406,6 +1406,41 @@
                 }
             ],
             "time": "2022-07-29T13:28:29+00:00"
+        },
+        {
+            "name": "monthly-basis/ip-address",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/monthly-basis/ip-address.git",
+                "reference": "847dc0bd1929b8627886a0ef535ea850d5be0ff3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monthly-basis/ip-address/zipball/847dc0bd1929b8627886a0ef535ea850d5be0ff3",
+                "reference": "847dc0bd1929b8627886a0ef535ea850d5be0ff3",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-test": "^3.1",
+                "monthly-basis/laminas-test": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MonthlyBasis\\IpAddress\\": "src/",
+                    "MonthlyBasis\\IpAddressTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/monthly-basis/ip-address/issues",
+                "source": "https://github.com/monthly-basis/ip-address/tree/v2.5.0"
+            },
+            "time": "2022-07-29T21:42:34+00:00"
         },
         {
             "name": "monthly-basis/laminas-test",
