@@ -64,7 +64,7 @@ class Module
                 },
                 ReCaptchaService\Valid::class => function ($sm) {
                     return new ReCaptchaService\Valid(
-                        $sm->get(ReCaptchaService\Allowlists\IpV4::class),
+                        $sm->get(ReCaptchaService\Allowlists\IpAddress::class),
                         $sm->get('Config')['re-captcha']['domains'][$_SERVER['HTTP_HOST']]['secret-key']
                     );
                 },

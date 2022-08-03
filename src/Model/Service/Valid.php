@@ -6,16 +6,16 @@ use MonthlyBasis\ReCaptcha\Model\Service as ReCaptchaService;
 class Valid
 {
     public function __construct(
-        ReCaptchaService\Allowlists\IpV4 $ipV4Service,
+        ReCaptchaService\Allowlists\IpAddress $ipAddressService,
         string $secretKey
     ) {
-        $this->ipV4Service = $ipV4Service;
-        $this->secretKey   = $secretKey;
+        $this->ipAddressService = $ipAddressService;
+        $this->secretKey        = $secretKey;
     }
 
     public function isValid(): bool
     {
-        if ($this->ipV4Service->isIpV4InAllowlists($_SERVER['REMOTE_ADDR'])) {
+        if ($this->ipAddressService->isIpAddressInAllowlists($_SERVER['REMOTE_ADDR'])) {
             return true;
         }
 

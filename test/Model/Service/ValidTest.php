@@ -8,12 +8,12 @@ class ValidTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->ipV4ServiceMock = $this->createMock(
-            ReCaptchaService\Allowlists\IpV4::class
+        $this->ipAddressServiceMock = $this->createMock(
+            ReCaptchaService\Allowlists\IpAddress::class
         );
 
         $this->validService = new ReCaptchaService\Valid(
-            $this->ipV4ServiceMock,
+            $this->ipAddressServiceMock,
             'secret'
         );
     }
@@ -21,13 +21,13 @@ class ValidTest extends TestCase
     /**
      * @runInSeparateProcess
      */
-    public function test_isValid_ipV4IsInAllowlist_true()
+    public function test_isValid_ipAddressIsInAllowlist_true()
     {
         $_SERVER['REMOTE_ADDR'] = '1.2.3.4';
 
-        $this->ipV4ServiceMock
+        $this->ipAddressServiceMock
             ->expects($this->once())
-            ->method('isIpV4InAllowlists')
+            ->method('isIpAddressInAllowlists')
             ->with('1.2.3.4')
             ->willReturn(true)
             ;
@@ -40,6 +40,13 @@ class ValidTest extends TestCase
     public function test_isValid_invalidPostData_false()
     {
         $this->markTestSkipped('Skip test unless you want to curl data from Google');
+
+        $this->ipAddressServiceMock
+            ->expects($this->once())
+            ->method('isIpAddressInAllowlists')
+            ->with('1.2.3.4')
+            ->willReturn(false)
+            ;
 
         $_POST['g-recaptcha-response'] = 'test';
         $_SERVER['REMOTE_ADDR'] = '123.123.123.123';
