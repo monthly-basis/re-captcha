@@ -9,31 +9,31 @@ class ScriptTagTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->ipV4ServiceMock = $this->createMock(
-            ReCaptchaService\Allowlists\IpV4::class
+        $this->ipAddressServiceMock = $this->createMock(
+            ReCaptchaService\Allowlists\IpAddress::class
         );
 
         $this->scriptTagHelper = new ReCaptchaHelper\ScriptTag(
-            $this->ipV4ServiceMock,
+            $this->ipAddressServiceMock,
         );
     }
 
     /**
      * @runInSeparateProcess
      */
-    public function test___invoke_ipV4InAllowlist_htmlComment()
+    public function test___invoke_ipAddressIsInAllowlist_htmlComment()
     {
         $_SERVER['REMOTE_ADDR'] = '1.2.3.4';
 
-        $this->ipV4ServiceMock
+        $this->ipAddressServiceMock
             ->expects($this->once())
-            ->method('isIpV4InAllowlists')
+            ->method('isIpAddressInAllowlists')
             ->with('1.2.3.4')
             ->willReturn(true)
             ;
 
         $this->assertSame(
-            '<!-- The script tag was omitted because your IPv4 is in the allowlist. -->',
+            '<!-- The script tag was omitted because your IP address is in the allowlists. -->',
             $this->scriptTagHelper->__invoke()
         );
     }
@@ -45,9 +45,9 @@ class ScriptTagTest extends TestCase
     {
         $_SERVER['REMOTE_ADDR'] = '1.2.3.4';
 
-        $this->ipV4ServiceMock
+        $this->ipAddressServiceMock
             ->expects($this->once())
-            ->method('isIpV4InAllowlists')
+            ->method('isIpAddressInAllowlists')
             ->with('1.2.3.4')
             ->willReturn(false)
             ;

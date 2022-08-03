@@ -7,15 +7,15 @@ use Laminas\View\Helper\AbstractHelper;
 class ScriptTag extends AbstractHelper
 {
     public function __construct(
-        ReCaptchaService\Allowlists\IpV4 $ipV4Service
+        ReCaptchaService\Allowlists\IpAddress $ipAddressService
     ) {
-        $this->ipV4Service = $ipV4Service;
+        $this->ipAddressService = $ipAddressService;
     }
 
     public function __invoke()
     {
-        if ($this->ipV4Service->isIpV4InAllowlists($_SERVER['REMOTE_ADDR'])) {
-            return '<!-- The script tag was omitted because your IPv4 is in the allowlist. -->';
+        if ($this->ipAddressService->isIpAddressInAllowlists($_SERVER['REMOTE_ADDR'])) {
+            return '<!-- The script tag was omitted because your IP address is in the allowlists. -->';
         }
 
         return '<script src="https://www.google.com/recaptcha/api.js"></script>';
