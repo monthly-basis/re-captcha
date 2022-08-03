@@ -1,6 +1,7 @@
 <?php
 namespace MonthlyBasis\ReCaptcha;
 
+use MonthlyBasis\IpAddress\Model\Service as IpAddressService;
 use MonthlyBasis\ReCaptcha\Model\Entity as ReCaptchaEntity;
 use MonthlyBasis\ReCaptcha\Model\Service as ReCaptchaService;
 use MonthlyBasis\ReCaptcha\View\Helper as ReCaptchaHelper;
@@ -46,6 +47,12 @@ class Module
                 ReCaptchaService\Allowlists\IpV4::class => function ($sm) {
                     return new ReCaptchaService\Allowlists\IpV4(
                         $sm->get(ReCaptchaEntity\Config::class)
+                    );
+                },
+                ReCaptchaService\Allowlists\IpV6::class => function ($sm) {
+                    return new ReCaptchaService\Allowlists\IpV6(
+                        $sm->get(IpAddressService\V6\FirstFourSegments::class),
+                        $sm->get(ReCaptchaEntity\Config::class),
                     );
                 },
                 ReCaptchaService\Valid::class => function ($sm) {
